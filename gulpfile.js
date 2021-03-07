@@ -26,7 +26,10 @@ function watching() {
 }
 
 function scss() {
-  return src('app/scss/style.scss')
+  return src([
+    'node_modules/normalize.css/normalize.css',
+    'app/scss/style.scss'
+  ])
     .pipe(sass({
       outputStyle: 'compressed'
     }))
